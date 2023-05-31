@@ -55,11 +55,137 @@ public class Calculadora implements ActionListener {
 
         // add the listeners
 
+
+        buttons[0].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("1"));
+            }
+        });
+        buttons[1].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("2"));
+            }
+        });
+        buttons[2].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("3"));
+            }
+        });
+        buttons[3].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("4"));
+            }
+        });
+        buttons[4].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("5"));
+            }
+        });
+        buttons[5].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("6"));
+            }
+        });
+        buttons[6].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("7"));
+            }
+        });
+        buttons[7].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("8"));
+            }
+        });
+        buttons[8].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("9"));
+            }
+        });
+        buttons[9].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("0"));
+            }
+        });
+        buttons[10].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t.setText(t.getText().concat("."));
+            }
+        });
+        buttons[11].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a = Double.parseDouble(t.getText());
+                operator = 0;
+                t.setText("");
+            }
+
+        });
+        buttons[12].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a = Double.parseDouble(t.getText());
+                operator = 2;
+                t.setText("");
+            }
+        });
+        buttons[13].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a = Double.parseDouble(t.getText());
+                operator = 3;
+                t.setText("");
+            }
+        });
+        buttons[14].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a = Double.parseDouble(t.getText());
+                operator = 4;
+                t.setText("");
+            }
+        });
+        buttons[15].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                b = Double.parseDouble(t.getText());
+                operar();
+                a=b;
+                t.setText(String.valueOf(result));
+            }
+            void operar() {
+                switch (operator) {
+                    case 0:
+                        result = a + b;
+                        break;
+                    case 1:
+                        result = a - b;
+                        break;
+                    case 2:
+                        result = a * b;
+                        break;
+                    case 3:
+                        result = a / b;
+                        break;
+                }
+            }
+        });
     }
 // SECTION 1. MAKE THE PROGRAM RESPOND TO ALL POSSIBLE EVENTS CAUSED BY
 // THE MOUSE IN THE CALCULATOR'S HANDLING
 
 // NAME OF APPROPRIATE METHOD TO PROCESS EVENTS {
+
 
 /*
 
@@ -76,17 +202,20 @@ IF THE Clear BUTTON IS PRESSED, CLEAR THE TEXT BOX
 
 IF THE Delete BUTTON IS PRESSED, USE A StringBuilder TO DELETE A CHARACTER FROM THE SEQUENCE*/
 
-      t.requestFocus(); // PlACE A focal point in the field again.
+      //t.requestFocus(); // PlACE A focal point in the field again.
 
 
+
+
+
+
+    public static void main(String[] args) {
+        new Calculadora();
     }
 
-    private void Operar() {
-        b = Double.parseDouble(t.getText());
-// PERFORM THE APPROPRIATE OPERATION BASED ON THE VALUE OF THE OPERATOR VARIABLE
-// AND DISPLAY THE VALUE OF THE VARIABLE IN THE TEXT BOX
+    @Override
+    public void actionPerformed(ActionEvent e) {
 
-        Copy code
     }
 }
 
